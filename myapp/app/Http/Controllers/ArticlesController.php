@@ -11,9 +11,24 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
     public function index()
     {
         return __METHOD__ . '은(는) Article 컬렉션을 조회합니다.';
+    }
+    */
+    public function index()
+    {
+        /*
+        $articles = \App\Article::get();
+        //$articles = \App\Article::with('user')->get();
+
+        $articles->load('user');
+        */
+
+        $articles = \App\Article::latest()->paginate(3);
+        
+        return view('articles.index', compact('articles'));
     }
 
     /**

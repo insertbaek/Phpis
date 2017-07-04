@@ -13,8 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome', [
-        'name' => 'FooWoo',
-        'greeting' => '안녕하세용?',
-    ]);
+    $items = ['apple', 'banana', 'tomato'];
+
+    return view('welcome', ['items' => $items]);
 });

@@ -177,6 +177,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * 20170926 인터벤션 이미지 컴포넌트
+         */
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -226,6 +231,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /*
+         * 20170926 인터벤션 이미지 컴포넌트
+        */
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
